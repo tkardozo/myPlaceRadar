@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ITW App</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi" />
+    <link rel="shortcut icon" type="image/png" href="icon.png" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/durandal.css" rel="stylesheet" />
+    <link href="Content/myApp.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="applicationHost"></div>
+    
+    <div class="container">
+  <div class="modal fade" id="myModal_proc" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 style=" display:inline-block;" class="modal-title">Resultados:</h2>
+        </div>
+        <div class="modal-body" >
+        <div style="display: block">
+            <div class="col-md-12" align="center" id="modal_proc">                
+            </div>
+            
+        </div>
+        <div class="col-sm-12"><br></div>
+        <div class="modal-footer" style="margin-top: 50px; border-top: 0px">
+          <button type="button" class="btn btn-default"  style="margin-top: 50px"  data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <div class="modal fade" id="myModal_autor" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <img style=" display:inline-block; border-radius: 5px; width: 60px; height: 60px;" id="foto" >
+          <h4 style=" display:inline-block;" id="nome" class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body" >
+        <div style="display: block">
+            <div class="col-sm-12" align="center"><strong>Info Pessoal</strong></div>
+            <div class="col-md-12"><br></div>
+            <div class="col-md-4" align="center">
+                <u style="margin-bottom: 3px; margin-top: 6px;">Contacto:</u>
+                <p id="contacto" style="margin-bottom: 1px;">Teste</p>
+            </div>
+            <div class="col-md-4" align="center">
+            	<u style="margin-bottom: 3px; margin-top: 6px;">Morada:</u>
+                <p id="morada"style="margin-bottom: 1px;">Teste</p>
+                <button id="btn_morada" class="btn"> MAPA! </button>
+            </div>
+            <div class="col-md-4" align="center">
+            	<u style="margin-bottom: 3px; margin-top: 6px;">Cidade/Zip:</u>
+                <p id="cidade" style="margin-bottom: 1px;">Teste</p>
+            </div>
+        </div>
+        <div class="col-sm-12"><br></div>
+        <div class="modal-footer" style="border-top: 0px">
+          <button type="button" class="btn btn-default" style="margin-top: 50px" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="modal fade" id="myModal_livro" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <img style=" display:inline-block; border-radius: 5px; width: 60px; height: 60px;" id="foto" src="Content/images/book_v.png">
+          <h4 style=" display:inline-block;" id="nomea" class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body" >
+        <div style="display: block">
+            <div class="col-md-12"><br></div>
+            <div class="col-md-2" align="center">
+                <u style="margin-bottom: 3px; margin-top: 6px;">Género:</u>
+                <p id="genero" style="margin-bottom: 1px;">Teste</p>
+            </div>
+            <div class="col-md-2" align="center">
+            	<u style="margin-bottom: 3px; margin-top: 6px;">Preço:</u>
+                <p id="preco"style="margin-bottom: 1px;">Teste</p>
+            </div>
+            <div class="col-md-8" align="center">
+            	<u style="margin-bottom: 3px; margin-top: 6px;">Notas de edição:</u>
+                <p id="notas" style="margin-bottom: 1px;">Teste</p>
+            </div>
+        </div>
+        <div class="col-sm-12"><br></div>
+        <div class="modal-footer" style="border-top: 0px">
+          <button type="button" class="btn btn-default"  style="margin-top: 50px"  data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="modal fade" id="myModal_mapa" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 style=" display:inline-block;" class="modal-title">Localização</h4>
+        </div>
+        <div class="modal-body" >
+        <div style="display: block">
+            <div class="col-sm-12" align="center">
+            <iframe id="mapa" frameborder="0" style="border:0; width:100%; height:250px;" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="col-sm-12"><br></div>
+        <div class="modal-footer" style="border-top: 0px">
+          <button type="button" class="btn btn-default"  style="margin-top: 50px"  data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    
+    <script src="cordova.js"></script>
+    <script src="Scripts/jquery-2.1.4.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/knockout-3.3.0.js"></script>
+    <script src="Scripts/require.js" data-main="App/main"></script>
+</body>
+</html>
